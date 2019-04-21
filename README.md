@@ -41,19 +41,25 @@ expand_state                 |         enum         |       collapse       |    
 collapse_line_space_percent  |         integer      |       20             |  折叠状态下，最后一行空白所占宽度的百分比，0-100
 expend_click_event_on        |         enum         |       all            |  点击可以展开/收起的事件源，all:点击文本的任何地方都可以展开/收起；expand_text：只有点击展开/收起按钮才可以展开/收起
 ###### 使用示例：
+```
+//xml布局文件中：
 <com.wyx.components.widgets.ExpandCollpaseTextView
-        android:id="@+id/tv_merchant_description"
+        android:id="@+id/expand_textview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="@+id/tv_merchant_address"
-        app:layout_constraintEnd_toEndOf="@+id/tv_merchant_address"
-        app:layout_constraintTop_toBottomOf="@+id/tv_merchant_pm25"
-        app:content_text_color="@color/text_second_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:content_text_color="#999999"
         app:content_text_size="12"
         app:text_line_height="2dp"
-        app:expand_text_color="@color/colorPrimary"
+        app:expand_text_color="#06C362"
         app:collapse_line_space_percent="70"
         />
+//java文件中：
+ExpandCollpaseTextView expandTextView = findViewById(R.id.expand_textview);
+expandTextView.setText("XXXXXXXXXXXXXXXXXXX");
+
+```	
 ###### 效果预览：
 ![](http://m.qpic.cn/psb?/V11udxUS3o4KXH/p051QTqcVWbGHwyid4MbkcnFqx6ZJHs7HNsOkz*HQow!/b/dLkAAAAAAAAA&bo=WALfBAAAAAACR.I!&rf=viewer_4)
