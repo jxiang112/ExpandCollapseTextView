@@ -12,7 +12,7 @@ allprojects {
 * 在要使用的模块目录下的build.gradle添加如下依赖：
 ```
 dependencies {
-	        implementation 'com.github.jxiang112:ExpandCollapseTextView:Tag'
+	        implementation 'com.github.jxiang112:ExpandCollapseTextView:v1.0.2'
 	}
 ```
 ###### 特性：
