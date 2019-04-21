@@ -1,4 +1,20 @@
 ###### ExpandCollpaseTextView是可以展开和收起的文本控件
+###### 添加依赖：
+* 在项目根目录下的build.gradle添加如下依赖：
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+* 在要使用的模块目录下的build.gradle添加如下依赖：
+```
+dependencies {
+	        implementation 'com.github.jxiang112:ExpandCollapseTextView:Tag'
+	}
+```
 ###### 特性：
 * 可以设置收起状态下显示的行数
 * 可以设置收起状态下，最后一行剩余空白的占比
@@ -24,5 +40,20 @@ collapse_show_line_number    |         integer      |       2              |    
 expand_state                 |         enum         |       collapse       |      设置展开折叠状态，collapse: 折叠状态；expend：展开状态
 collapse_line_space_percent  |         integer      |       20             |  折叠状态下，最后一行空白所占宽度的百分比，0-100
 expend_click_event_on        |         enum         |       all            |  点击可以展开/收起的事件源，all:点击文本的任何地方都可以展开/收起；expand_text：只有点击展开/收起按钮才可以展开/收起
+###### 使用示例：
+<com.wyx.components.widgets.ExpandCollpaseTextView
+        android:id="@+id/tv_merchant_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_merchant_address"
+        app:layout_constraintEnd_toEndOf="@+id/tv_merchant_address"
+        app:layout_constraintTop_toBottomOf="@+id/tv_merchant_pm25"
+        app:content_text_color="@color/text_second_color"
+        app:content_text_size="12"
+        app:text_line_height="2dp"
+        app:expand_text_color="@color/colorPrimary"
+        app:collapse_line_space_percent="70"
+        />
 ###### 效果预览：
 ![](http://m.qpic.cn/psb?/V11udxUS3o4KXH/p051QTqcVWbGHwyid4MbkcnFqx6ZJHs7HNsOkz*HQow!/b/dLkAAAAAAAAA&bo=WALfBAAAAAACR.I!&rf=viewer_4)
