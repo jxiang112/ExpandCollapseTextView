@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExpandCollpaseTextView">
+        <attr name="expand_text" format="string"/>
+        <attr name="collapse_text" format="string"/>
+        <attr name="expand_text_size" format="integer"/>
+        <attr name="expand_text_color" format="color"/>
+        <attr name="content_text" format="string"/>
+        <attr name="text_line_height" format="dimension"/>
+        <attr name="content_text_size" format="integer"/>
+        <attr name="content_text_color" format="color"/>
+        <attr name="collapse_show_line_number" format="integer"/>
+        <attr name="expand_state">
+            <enum name="expend" value="0"/>
+            <enum name="collapse" value="1"/>
+        </attr>
+        <attr name="collapse_line_space_percent" format="integer"/>
+        <attr name="expend_click_event_on">
+            <enum name="all" value="0"/>
+            <enum name="expand_text" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>
